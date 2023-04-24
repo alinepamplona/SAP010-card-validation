@@ -40,10 +40,13 @@ const validator = {
     numerodocartao = numerodocartao.replace(/\s/g, '')
 
     if (numerodocartao.length <= 4) {
-      return numerodocartao; // não há nada para mascarar
+      // Não há nada para mascarar
+      return numerodocartao;
     } else {
-      const quatroultimos = numerodocartao.slice(-4); // obter os últimos quatro dígito
-      return "#".repeat(numerodocartao.length - 4) + quatroultimos; // criar uma string mascarada com "#" para os dígitos não finais
+      // Obter os últimos quatro dígito
+      const quatroultimos = numerodocartao.slice(-4);
+      // Criar uma string mascarada com "#" para os dígitos não finais
+      return "#".repeat(numerodocartao.length - 4) + quatroultimos;
     }
   }
 };

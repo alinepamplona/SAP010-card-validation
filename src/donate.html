@@ -2,30 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fazer doação</title>
+    <title>Cartão de crédito</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Lar dos gatinhos sem dono</header>
+    <header>Validação do cartão de crédito</header>
     <main>
-      <div>
-        <!-- <p1>Cartão</p1> -->
 
-        <p>Insira os dados do seu cartão de crédito abaixo</p>
-        <form id="cartao">
+      <div class="imagemcartao">
+        <!-- Fazer o layout do Cartão bonitinho -->
+      </div>
+
+      <div class="formulario">
+        <p>Insira os dados do seu cartão de crédito</p>
+        <form id="cartao" class="cartaoform">
             <div>
-                <label for="numerodocartao">Número do Cartão:</label>
-                <input type="text" id="numerodocartao" placeholder="Digite o número do seu cartão" maxlength="16" minlength="16">
-                <!-- <span>Digite um número de cartão válido</span> -->
+                <p><label for="numerodocartao">Número do Cartão:</label>
+                <input type="text" id="numerodocartao" placeholder="Digite o número do seu cartão" maxlength="19"></p>
+                <span id="mensageminvalido" hidden>Digite um número de cartão válido</span>
             </div>
+            <div>
+                <p><label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite o nome do titular"></p>
+            </div>
+            <div>
+                <p><label for="validade">Validade:</label>
+                <input type="text" id="validade" placeholder="Mês/Ano" maxlength="5"></p>
+            </div>
+            <div>
+                <p><label for="codigodeseguranca">Código de segurança:</label>
+                <input type="text" id="codigodeseguranca" placeholder="CVV" maxlength="3"></p>
+            </div>
+            <div>
+                <p><label for="valordoado">Valor:</label>
+                <input type="text" id="valordoado" placeholder="R$ 0,00"></p>
+            </div>
+
+            
+          <button id="validacao" class="botaoform">Doar</button>
         </form>
       </div>
 
-      <div>
-        <button id="validacao">Doar</button>
-      </div>
     </main>
     <footer></footer>
-    <script src="index.js" type="module"></script>
+    <script src="donate.js" type="module"></script>
   </body>
 </html>
