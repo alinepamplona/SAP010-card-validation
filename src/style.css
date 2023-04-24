@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+
+body {
+    background: #ddeefc;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+}
+  
+* {
+box-sizing: border-box;
+}
+  
+*:focus {
+outline: none;
+}
+
+input {
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+    font-size: 27px;
+    margin-bottom: 35px;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.imagemcartao {
+  min-height: 100vh;
+  display: flex;
+  padding: 50px 15px;
+}
+
+.formulario {
+    max-width: 570px;
+    margin: auto;
+    width: 100%;
+
+    /*background-color: #F3E5F5;
+    color: #AB47BC;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    padding: 25px;*/
+}
+
+.cartaoform {
+    background: #fff;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    border-radius: 10px;
+    padding: 35px;
+    padding-top: 180px;
+}
+
+.botaoform {
+    width: 100%;
+    height: 55px;
+    background: #2364d2;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Source Sans Pro", sans-serif;
+    box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}  
