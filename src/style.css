@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
-
 body {
-    background: #ddeefc;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 16px;
+    background: #DDEEFC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
   
 * {
@@ -14,56 +11,129 @@ box-sizing: border-box;
 outline: none;
 }
 
+.wrapper {
+    height: 100%;
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 540px;
+    margin: auto;
+    width: 100%;
+}
+
+label {
+    color: #616161;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 input {
     font-weight: 500;
-    line-height: 1;
-    color: #000;
-    font-size: 27px;
-    margin-bottom: 35px;
-    display: inline-block;
-    padding: 10px 15px;
+    width: 100%;
+    color: #424242;
+    font-size: 18px;
+    padding: 5px 5px;
+    border: 1.5px solid #6161616c;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.imagemcartao {
-  min-height: 100vh;
-  display: flex;
-  padding: 50px 15px;
+.valcvv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.formulario {
-    max-width: 570px;
-    margin: auto;
-    width: 100%;
-
-    /*background-color: #F3E5F5;
-    color: #AB47BC;
-    border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    padding: 25px;*/
+.valcvv label,
+.valcvv input {
+    width: 45%;
+    float: left;
+    margin-right: 10%;
 }
 
 .cartaoform {
     background: #fff;
-    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    box-shadow: 0 30px 30px 0 rgba(90, 116, 148, 0.4);
     border-radius: 10px;
     padding: 35px;
-    padding-top: 180px;
+    padding-top: 120px;
+    margin-top: -105px;
 }
 
 .botaoform {
     width: 100%;
     height: 55px;
-    background: #2364d2;
+    background: #9575CD;
     border: none;
     border-radius: 5px;
     font-size: 22px;
     font-weight: 500;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
     color: #fff;
     margin-top: 20px;
     cursor: pointer;
-}  
+}
+
+
+.card {
+    width: 350px;/*5*/
+    height: 210px;/*3*/
+    position: relative;
+    margin: auto;
+    background-image: url("https://i.pinimg.com/originals/64/65/ad/6465adc381665f66244a44f8c09616e1.jpg");
+    color: #fff;
+    z-index: 1;
+
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+
+    -webkit-box-shadow: 0 15px 24px rgba(37,44,65,0.32);
+       -moz-box-shadow: 0 15px 24px rgba(37,44,65,0.32);
+            box-shadow: 0 15px 24px rgba(37,44,65,0.32);
+}
+
+.card-content {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    float: left;
+    z-index: 1;
+}
+
+.cartaodados {
+    padding-top: 70px;
+    width: 100%;
+    display: grid;
+}
+
+.cartaodados span {
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+#cartaonumero {
+    font-size: 22px;
+}
+
+.cartaovalcvv {
+    display: inline-flex;
+}
+
+.cartaovalcvv span {
+    width: 100%;
+    float: left;
+    margin-right: 70%;
+}
+
+#logo-visa {
+    position: relative;
+    margin-top: -20px;
+    float: right;
+}

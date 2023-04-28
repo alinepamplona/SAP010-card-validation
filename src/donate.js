@@ -3,7 +3,6 @@ import validator from './validator.js';
 // Achar os elementos no HTML
 const numerodocartao = document.getElementById('numerodocartao')
 const mensageminvalido = document.getElementById('mensageminvalido')
-const valordoado = document.getElementById("valordoado")
 const validade = document.getElementById("validade")
 
 // Implementar os metodos de event listener do input
@@ -31,13 +30,6 @@ numerodocartao.addEventListener('input', function(event) {
     }
   });
 
-// TODO: Implementar o event listener dos outros inputs
-valordoado.addEventListener('input', function(event) {
-    let input = event.target
-
-    input.value = mascaras.mascaravalor(input.value)
-});
-
 validade.addEventListener('input', function(event) {
     let input = event.target
 
@@ -53,12 +45,6 @@ const mascaras = {
             .replace(/(\d{4}|\#{4})(\d|\#)/, '$1 $2')
             .replace(/(\d{4}|\#{4})(\d|\#)/, '$1 $2')
             .replace(/(\d{4}|\#{4})(\d)/, '$1 $2')
-    },
-
-    // TODO: Fazer a mascara para a validade
-    mascaravalor: function(valordoado) {
-        return valordoado
-            .replace(/[^0-9]/g, '')
     },
 
     mascaravalidade: function(validade) {

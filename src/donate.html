@@ -6,45 +6,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Validação do cartão de crédito</header>
     <main>
 
-      <div class="imagemcartao">
-        <!-- Fazer o layout do Cartão bonitinho -->
-      </div>
+    <div class="wrapper">
 
-      <div class="formulario">
-        <p>Insira os dados do seu cartão de crédito</p>
-        <form id="cartao" class="cartaoform">
-            <div>
+        <!-- Fazer o layout do Cartão bonitinho -->
+      <div class="content">
+          <div class='card'>
+            <div class='card-content'>
+              
+              <div class="cartaodados">
+                <span id='cartaonumero'>0000 0000 0000 0000</span>
+                <span id='cartaonome'>Nome do titular</span>
+                <div class="cartaovalcvv">
+                  <span id='cartaovalidade'>00/00</span>
+                  <span id='cartaocvv'>000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- <p>Insira os dados do seu cartão de crédito</p> -->
+        <form class="cartaoform">
+            <div class="numerodocartao">
                 <p><label for="numerodocartao">Número do Cartão:</label>
-                <input type="text" id="numerodocartao" placeholder="Digite o número do seu cartão" maxlength="19"></p>
+                <input type="text" id="numerodocartao" placeholder="0000 0000 0000 0000" maxlength="19"></p>
                 <span id="mensageminvalido" hidden>Digite um número de cartão válido</span>
             </div>
-            <div>
+            <div class="nome">
                 <p><label for="nome">Nome:</label>
-                <input type="text" id="nome" placeholder="Digite o nome do titular"></p>
+                <input type="text" id="nome" placeholder="Nome do titular"></p>
             </div>
-            <div>
+            <div class="valcvv">
                 <p><label for="validade">Validade:</label>
                 <input type="text" id="validade" placeholder="Mês/Ano" maxlength="5"></p>
-            </div>
-            <div>
-                <p><label for="codigodeseguranca">Código de segurança:</label>
-                <input type="text" id="codigodeseguranca" placeholder="CVV" maxlength="3"></p>
-            </div>
-            <div>
-                <p><label for="valordoado">Valor:</label>
-                <input type="text" id="valordoado" placeholder="R$ 0,00"></p>
+                <p><label for="codigodeseguranca">CVV:</label>
+                <input type="text" id="codigodeseguranca" placeholder="000" maxlength="3"></p>
             </div>
 
             
-          <button id="validacao" class="botaoform">Doar</button>
+          <button id="validacao" class="botaoform">Validar</button>
         </form>
       </div>
-
+    </div>
     </main>
     <footer></footer>
     <script src="donate.js" type="module"></script>
   </body>
+
 </html>
