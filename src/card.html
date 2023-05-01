@@ -27,26 +27,26 @@
           </div>
 
         <!-- <p>Insira os dados do seu cartão de crédito</p> -->
-        <form class="cartaoform">
+        <div class="cartaoform">
+          <form>
             <div class="numerodocartao">
-                <p><label for="numerodocartao">Número do Cartão:</label>
-                <input type="text" id="numerodocartao" placeholder="0000 0000 0000 0000" maxlength="19"></p>
-                <span id="mensageminvalido" hidden>Digite um número de cartão válido</span>
-            </div>
-            <div class="nome">
-                <p><label for="nome">Nome:</label>
-                <input type="text" id="nome" placeholder="Nome do titular" maxlength="33"></p>
-            </div>
-            <div class="valcvv">
-                <p><label for="validade">Validade:</label>
-                <input type="text" id="validade" placeholder="Mês/Ano" maxlength="5"></p>
-                <p><label for="codigodeseguranca">CVV:</label>
-                <input type="text" id="codigodeseguranca" placeholder="000" maxlength="3"></p>
-            </div>
+                  <p><label for="numerodocartao">Número do Cartão:</label>
+                  <input type="text" id="numerodocartao" placeholder="0000 0000 0000 0000" maxlength="19"></p>
+              </div>
+              <div class="nome">
+                  <p><label for="nome">Nome:</label>
+                  <input type="text" id="nome" placeholder="Nome do titular" maxlength="33"></p>
+              </div>
+              <div class="valcvv">
+                  <p><label for="validade">Validade:</label>
+                  <input type="text" id="validade" placeholder="Mês/Ano" maxlength="5"></p>
+                  <p><label for="codigodeseguranca">CVV:</label>
+                  <input type="text" id="codigodeseguranca" placeholder="000" maxlength="3"></p>
+              </div>
+            </form>
 
-            
-          <button id="validacao" class="botaoform">Validar</button>
-        </form>
+            <button id="validacao" class="botaoform">Validar</button>
+          </div>
       </div>
     </div>
     </main>

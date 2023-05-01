@@ -46,7 +46,7 @@ const validator = {
       // Obter os últimos quatro dígito
       const quatroultimos = numerodocartao.slice(-4);
       // Criar uma string mascarada com "#" para os dígitos não finais
-      return "#".repeat(numerodocartao.length - 4) + quatroultimos;
+      return "*".repeat(numerodocartao.length - 4) + quatroultimos;
     }
   }
 };
