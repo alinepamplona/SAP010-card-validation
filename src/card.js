@@ -3,7 +3,8 @@ import validator from './validator.js';
 // Achar os elementos no HTML
 // Elementos do formulário
 const numerodocartao = document.getElementById('numerodocartao')
-const validade = document.getElementById('validade')
+const validademes = document.getElementById('validademes')
+const validadeano = document.getElementById('validadeano')
 const nome = document.getElementById('nome')
 const codigodeseguranca = document.getElementById('codigodeseguranca')
 const botaodevalidacao = document.getElementById('validacao')
@@ -12,6 +13,30 @@ const cartaonumero = document.getElementById('cartaonumero')
 const cartaonome = document.getElementById('cartaonome')
 const cartaovalidade = document.getElementById('cartaovalidade')
 const cartaocvv = document.getElementById('cartaocvv')
+
+// Adiciona as opções de mês
+for (let i = 1; i <= 12; i++) {
+    let option = document.createElement("option");
+    if (i < 10) {
+        option.value = "0"+i;
+        option.text = "0"+i;
+    } else {
+        option.value = i;
+        option.text = i;
+    }
+    validademes.appendChild(option);
+}
+// Define o ano atual como o limite inferior
+let limiteInferior = new Date().getFullYear();
+// Define o limite superior como 10 anos depois do limite inferior
+let limiteSuperior = limiteInferior + 10;
+// Adiciona as opções de ano
+for (let i = limiteInferior; i <= limiteSuperior; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    validadeano.appendChild(option);
+}
 
 // Implementar os metodos de event listener do input
 numerodocartao.addEventListener('input', function(event) {
@@ -54,16 +79,20 @@ nome.addEventListener('input', function(event) {
     }
 })
 
-validade.addEventListener('input', function(event) {
-    let input = event.target
-
-    input.value = mascaras.mascaravalidade(input.value)
-
-    if (input.value.length == 5) {
-        cartaovalidade.innerHTML = input.value
-    } else {
-        cartaovalidade.innerHTML = "00/00"
+validademes.addEventListener('change', function() {
+    let ano = "0000"
+    if (validadeano.selectedIndex > 0) {
+        ano = validadeano.value
     }
+    cartaovalidade.innerHTML = this.value + "/" + ano
+})
+
+validadeano.addEventListener('change', function() {
+    let mes = "00"
+    if (validademes.selectedIndex > 0) {
+        mes = validademes.value
+    }
+    cartaovalidade.innerHTML = mes + "/" + this.value
 })
 
 codigodeseguranca.addEventListener('input', function(event) {
@@ -80,14 +109,16 @@ codigodeseguranca.addEventListener('input', function(event) {
 
 botaodevalidacao.addEventListener('click', function(event) {
     // Mostrar o alert de valido ou não somente se os outros campos tb estiverem preenchidos
-    if ((validade.value.length === 5) && (codigodeseguranca.value.length === 3) && (nome.value.length > 0)) {
+    if ((validademes.selectedIndex > 0 && validadeano.selectedIndex > 0)
+            && (codigodeseguranca.value.length === 3)
+            && (nome.value.length > 0)) {
         if (validator.isValid(numerodocartao.value)) {
             alert("Seu cartão é válido!")
         } else {
             alert("Seu cartão é inválido!")
         }
     } else {
-        alert("Preencha todos os dados corretamente")
+        alert("Preencha corretamente todos os dados.")
     }
 })
 
@@ -105,12 +136,6 @@ const mascaras = {
     mascaranome: function(nome) {
         return nome
             .replace(/[^a-zA-ZÀ-ú ]+/g, '')
-    },
-
-    mascaravalidade: function(validade) {
-        return validade
-            .replace(/[^0-9]/g, '')
-            .replace(/(\d{2})(\d)/, '$1/$2')
     },
 
     mascaracvv: function(cvv) {

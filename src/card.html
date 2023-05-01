@@ -19,7 +19,7 @@
                 <span id='cartaonumero'>0000 0000 0000 0000</span>
                 <span id='cartaonome'>Nome do titular</span>
                 <div class="cartaovalcvv">
-                  <span id='cartaovalidade'>00/00</span>
+                  <span id='cartaovalidade'>00/0000</span>
                   <span id='cartaocvv'>000</span>
                 </div>
               </div>
@@ -38,10 +38,22 @@
                   <input type="text" id="nome" placeholder="Nome do titular" maxlength="33"></p>
               </div>
               <div class="valcvv">
-                  <p><label for="validade">Validade:</label>
-                  <input type="text" id="validade" placeholder="Mês/Ano" maxlength="5"></p>
-                  <p><label for="codigodeseguranca">CVV:</label>
-                  <input type="text" id="codigodeseguranca" placeholder="000" maxlength="3"></p>
+                  <p>
+                    <label for="validade">Validade:</label>
+                    <p1>
+                      <select id="validademes">
+                        <option value="">Mês</option>
+                      </select>
+                      <span>/</span>
+                      <select id="validadeano">
+                        <option value="">Ano</option>
+                      </select>
+                    </p1>
+                  </p>
+                  <p>
+                    <label for="codigodeseguranca">CVV:</label>
+                    <input type="text" id="codigodeseguranca" placeholder="000" maxlength="3">
+                  </p>
               </div>
             </form>
 
