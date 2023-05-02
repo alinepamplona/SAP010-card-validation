@@ -77,4 +77,4 @@ Esse objeto foi utilizado como uma ferramenta para implementação do site.
 
 O projeto está disponível para acesso pelo GitHub Pages, através do Link:
 
-https://alinepamplona.github.io/SAP010-card-validation/card.html
+https://alinepamplona.github.io/SAP010-card-validation
