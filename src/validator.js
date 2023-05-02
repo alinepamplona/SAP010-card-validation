@@ -9,6 +9,7 @@ const validator = {
       return false;
     }
 
+    // Variável para guardar o valor da soma
     let sum = 0
 
     for (let i=0; i<numerodocartao.length; i++) {
@@ -17,7 +18,7 @@ const validator = {
       
       // Verificar se é impar
       if (i%2 === 1) {
-        // Se for par multiplica por 2
+        // Se for impar multiplica por 2
         digito *= 2
         // Verificar se é maior que 9
         if (digito > 9) {
@@ -27,7 +28,7 @@ const validator = {
       }
       // Se for par não faz nada
 
-      // Isso é a msm coisa que isso sum = sum + digito
+      // Adiciona à soma
       sum += digito
     }
 
