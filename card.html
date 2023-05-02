@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cartão de crédito</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+
+    <div class="wrapper">
+
+        <!-- Fazer o layout do Cartão bonitinho -->
+      <div class="content">
+          <div class="card">
+            <div class="card-content">
+              
+              <div class="cartaodados">
+                <span id="cartaonumero">0000 0000 0000 0000</span>
+                <span id="cartaonome">Nome do titular</span>
+                <div class="cartaovalcvv">
+                  <span id="cartaovalidade">00/0000</span>
+                  <span id="cartaocvv">000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- <p>Insira os dados do seu cartão de crédito</p> -->
+        <div class="cartaoform">
+          <form>
+            <div class="numerodocartao">
+                  <p><label for="numerodocartao">Número do Cartão:</label>
+                  <input type="text" id="numerodocartao" placeholder="0000 0000 0000 0000" maxlength="19"></p>
+              </div>
+              <div class="nome">
+                  <p><label for="nome">Nome:</label>
+                  <input type="text" id="nome" placeholder="Nome do titular" maxlength="33"></p>
+              </div>
+              <div class="valcvv">
+                  <p>
+                    <label for="validade">Validade:</label>
+                    <p1>
+                      <select id="validademes">
+                        <option value="">Mês</option>
+                      </select>
+                      <span>/</span>
+                      <select id="validadeano">
+                        <option value="">Ano</option>
+                      </select>
+                    </p1>
+                  </p>
+                  <p>
+                    <label for="codigodeseguranca">CVV:</label>
+                    <input type="text" id="codigodeseguranca" placeholder="000" maxlength="3">
+                  </p>
+              </div>
+            </form>
+
+            <button id="validacao" class="botaoform">Validar</button>
+          </div>
+      </div>
+    </div>
+    </main>
+    <footer></footer>
+    <script src="card.js" type="module"></script>
+  </body>
+
+</html>
