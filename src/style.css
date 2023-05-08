@@ -35,6 +35,59 @@ body {
     color: #616161;
 }
 
+.card {
+    width: 350px;/*5*/
+    height: 210px;/*3*/
+    position: relative;
+    margin: auto;
+    background-image: url("https://i.pinimg.com/originals/64/65/ad/6465adc381665f66244a44f8c09616e1.jpg");
+    color: #fff;
+    z-index: 1;
+
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+
+    -webkit-box-shadow: 0 15px 24px rgba(37,44,65,0.32);
+       -moz-box-shadow: 0 15px 24px rgba(37,44,65,0.32);
+            box-shadow: 0 15px 24px rgba(37,44,65,0.32);
+}
+
+.card-content {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    float: left;
+    z-index: 1;
+}
+
+.cartaodados {
+    padding-top: 70px;
+    display: grid;
+    outline: none;
+}
+
+.cartaodados span {
+    max-width: 310px;
+    text-transform: uppercase;
+    padding: 5px;
+    outline: none;
+}
+
+#cartaonumero {
+    font-size: 22px;
+}
+
+.cartaovalcvv {
+    display: inline-flex;
+}
+
+.cartaovalcvv span {
+    width: 100%;
+    float: left;
+    margin-right: 67%;
+}
+
 .cartaoform {
     background: #fff;
     box-shadow: 0 30px 30px 0 rgba(90, 116, 148, 0.4);
@@ -97,7 +150,7 @@ select {
     margin-right: 10%;
 }
 
-.botaoform {
+.botao {
     width: 100%;
     height: 55px;
     background: #9575CD;
@@ -111,55 +164,4 @@ select {
     margin-top: 20px;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-
-.card {
-    width: 350px;/*5*/
-    height: 210px;/*3*/
-    position: relative;
-    margin: auto;
-    background-image: url("https://i.pinimg.com/originals/64/65/ad/6465adc381665f66244a44f8c09616e1.jpg");
-    color: #fff;
-    z-index: 1;
-
-    -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-            border-radius: 6px;
-
-    -webkit-box-shadow: 0 15px 24px rgba(37,44,65,0.32);
-       -moz-box-shadow: 0 15px 24px rgba(37,44,65,0.32);
-            box-shadow: 0 15px 24px rgba(37,44,65,0.32);
-}
-
-.card-content {
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    float: left;
-    z-index: 1;
-}
-
-.cartaodados {
-    padding-top: 70px;
-    display: grid;
-}
-
-.cartaodados span {
-    text-transform: uppercase;
-    padding: 5px;
-}
-
-#cartaonumero {
-    font-size: 22px;
-}
-
-.cartaovalcvv {
-    display: inline-flex;
-}
-
-.cartaovalcvv span {
-    width: 100%;
-    float: left;
-    margin-right: 67%;
 }
